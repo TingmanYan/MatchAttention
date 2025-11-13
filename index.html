@@ -139,7 +139,7 @@
         </div>
         <hr> 
         <div>
-          <p>MatchStereo/MatchFlow outputs both view results and unreliable mathches can be filtered out by a consistency check.</p> <br>
+          <p>MatchStereo/MatchFlow outputs both view results. Unreliable matches can be filtered out by a consistency check.</p> <br>
           <img src="static/images/consistency_check.png" width="100%">
         </div>
         <hr> 
@@ -160,7 +160,7 @@
         <h2 class="title is-3"> <span
           style="color: #000000 ;font-weight: bolder;">Overview</span> </h2>
         <div class="content has-text-justified">
-          <p>MatchAttention accepts concatenated features and relative positions as input and updates them by residual connection. Attention sampling is performed at the window level with window center determined by the relative positions. The relative positions can be of any value and are iteratively updated across layers. Therefore, MatchAttention has a long-range connection property and linear complexity. Explicit matching between queries and key-value pairs within the attention sampling window is also achieved.</p> <br>
+          <p>MatchAttention takes concatenated features and relative positions as inputs and updates them via residual connections. Attention sampling is performed at the window level, with the window center determined by these relative positions. Since the relative positions can assume any value and are iteratively updated across layers, MatchAttention enjoys long-range connectivity and maintains linear complexity. Furthermore, explicit matching between queries and key-value pairs is performed within the attention sampling window.</p> <br>
           <img src="static/images/match_attention.png" width="100%">
         </div>
         <hr> 
@@ -192,7 +192,7 @@
         <h2 class="title is-3"> <span
           style="color: #000000 ;font-weight: bolder;">Explainable occlusion handling</span> </h2>
         <div class="content has-text-justified">
-          <p>Top row show the color image and GT occlusion mask from Middlebury dataset (Playtable, 1852 x 2720); Bottom row show the cross relative position \(R_{pos}[..., 0]\) (disparity) and the self relative position \(sR_{pos}[..., 0]\) predicted by MatchStereo-B trained on FSD Mix datasets.<br>The visualization of \(sR_{pos}[..., 0]\) demonstrates that the attention sampling positions for occluded regions are at their non-occluded neighboring regions.</p> <br>
+          <p>Top row shows the color image and GT occlusion mask from the Middlebury dataset (Playtable, 1852 x 2720); Bottom rows show the cross relative position \(R_{pos}[..., 0]\) (disparity) and the self relative position \(sR_{pos}[..., 0]\) predicted by MatchStereo-B trained on FSD Mix datasets.<br>The visualization of \(sR_{pos}[..., 0]\) demonstrates that the attention sampling positions for occluded regions lie within their non-occluded neighboring regions.</p> <br>
           <img src="static/images/self_rpos_visualize.png" width="100%">
         </div>
 
