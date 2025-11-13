@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRBT9DCW3F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZRBT9DCW3F');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <!-- <script src="http://popcornjs.org/code/dist/popcorn-complete.js"></script> -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="font-size:36px;">MatchAttention: Matching the Relative Positions for High-Resolution Cross-View Matching</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Tingman Yan<sup>1</sup>,
+              Tao Liu<sup>1</sup>,
+              Xilian Yang<sup>1</sup>,
+              Qunfei Zhao<sup>2</sup>,
+              Zeyang Xia<sup>2</sup>
+            </span>
+          </div>
+          <br>
+
+          <div class="subtitle is-size-5">
+            <sup>1</sup> Dalian University of Technology &nbsp;
+            <sup>2</sup> Shanghai Jiao Tong University &nbsp;
+          </div>
+
+          <!--
+          <img src="static/images/DLUT_logo.png" style="max-height: 150px"> <img src="static/images/Sjtu-logo.png" style="max-height: 150px">
+          -->
+
+          <!-- <div style="font-size:30px; font-weight: bold;">
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2510.14260" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/TingmanYan/MatchAttention" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Demo Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/spaces/Tingman/MatchStereo"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span>🤗 Demo</span>
+                </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered" style="margin-bottom: 0;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Cross-view matching is fundamentally achieved through cross-attention mechanisms. However, matching of high-resolution images remains challenging due to the quadratic complexity and lack of explicit matching constraints in the existing cross-attention. This paper proposes an attention mechanism, MatchAttention, that dynamically matches relative positions. The relative position determines the attention sampling center of the key-value pairs given a query. Continuous and differentiable sliding-window attention sampling is achieved by the proposed BilinearSoftmax. The relative positions are iteratively updated through residual connections across layers by embedding them into the feature channels. Since the relative position is exactly the learning target for cross-view matching, an efficient hierarchical cross-view decoder, MatchDecoder, is designed with MatchAttention as its core component. To handle cross-view occlusions, gated cross-MatchAttention and a consistency-constrained loss are proposed. These two components collectively mitigate the impact of occlusions in both forward and backward passes, allowing the model to focus more on learning matching relationships. <strong>When applied to stereo matching, MatchStereo-B ranked 1st in average error on the public Middlebury benchmark and requires only 29ms for KITTI-resolution inference. MatchStereo-T can process 4K UHD images in 0.1 seconds using only 3GB of GPU memory.</strong> The proposed models also achieve state-of-the-art performance on KITTI 2012, KITTI 2015, ETH3D, and Spring flow datasets. The combination of high accuracy and low computational complexity makes real-time, high-resolution, and high-accuracy cross-view matching possible.
+          </p>
+        </div>
+        <img src="static/images/fig_flops_summary.png" width="100%">
+      </div>
+      </div>
+
+    <br>
+    <br>
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> <span
+          style="color: #000000 ;font-weight: bolder;">Zero-shot Stereo Matching Results</span> </h2>
+        <div>
+          <p>High-Resolution inference with fine-grained details (images from Middlebury dataset).</p> <br>
+          <img src="static/images/high_res_details.png" width="100%">
+        </div>
+        <hr> 
+        <div>
+          <p>Accurate 3D reconstruction.</p> <br>
+          <video class="video" loop playsinline autoPlay muted src="https://github.com/TingmanYan/MatchAttention/blob/gh-pages/static/videos/highres_recon.mp4" preload="metadata" ></video>
+        </div>
+        <hr> 
+        <div>
+          <p>MatchStereo/MatchFlow outputs both view results and unreliable mathches can be filtered out by a consistency check.</p> <br>
+          <img src="static/images/consistency_check.png" width="100%">
+        </div>
+        <hr> 
+        <div>
+          <p>Real-time inference (MatchStereo-T @1280x720 on a RTX 4060 Ti GPU).</p> <br>
+          <video class="video" loop playsinline autoPlay muted src="https://github.com/TingmanYan/MatchAttention/blob/gh-pages/static/videos/realtime_demo.mp4" preload="metadata" ></video>
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> <span
+          style="color: #000000 ;font-weight: bolder;">Overview</span> </h2>
+        <div class="content has-text-justified">
+          <p>MatchAttention accepts concatenated features and relative positions as input and updates them by residual connection. Attention sampling is performed at the window level with window center determined by the relative positions. The relative positions can be of any value and are iteratively updated across layers. Therefore, MatchAttention has a long-range connection property and linear complexity. Explicit matching between queries and key-value pairs within the attention sampling window is also achieved.</p> <br>
+          <img src="static/images/match_attention.png" width="100%">
+        </div>
+        <hr> 
+        <div>
+          <p>Left: Detailed architecture of MatchAttention; Right: Contiguous and differentiable attention sampling using BilinearSoftmax.</p> <br>
+          <img src="static/images/match_attention_bilinear_softmax.png" width="100%">
+        </div>
+        <hr> 
+        <div>
+          <p>MatchDecoder with self-MatchAttention and cross-MatchAttention as building blocks.</p> <br>
+          <img src="static/images/match_decoder.png" width="100%">
+        </div>
+        <hr> 
+        <div>
+          <p>Intermediate disparity/flow visualization from initial correlation to the final output (images from Booster and Sintel datasets).</p> <br>
+          <img src="static/images/stereo_intermediate_vis.png" width="100%">
+          <img src="static/images/flow_intermediate_vis.png" width="100%">
+        </div>
+
+      </div>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> <span
+          style="color: #000000 ;font-weight: bolder;">Explainable occlusion handling</span> </h2>
+        <div class="content has-text-justified">
+          <p>Top row show the color image and GT occlusion mask from Middlebury dataset (Playtable, 1852 x 2720); Bottom row show the cross relative position \(R_{pos}[..., 0]\) (disparity) and the self relative position \(sR_{pos}[..., 0]\) predicted by MatchStereo-B trained on FSD Mix datasets.<br>The visualization of \(sR_{pos}[..., 0]\) demonstrates that the attention sampling positions for occluded regions are at their non-occluded neighboring regions.</p> <br>
+          <img src="static/images/self_rpos_visualize.png" width="100%">
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> <span
+          style="color: #000000 ;font-weight: bolder;">Comparison with SOTA</span> </h2>
+        <div class="content has-text-centered">
+          <p>Results from four public real-world benchmarks.</p> <br>
+          <img src="static/images/benchmark_performance.png" width="100%">
+        </div>
+
+      </div>
+    </div>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{yan2025matchattention,
+  title={MatchAttention: Matching the Relative Positions for High-Resolution Cross-View Matching},
+  author={Tingman Yan and Tao Liu and Xilian Yang and Qunfei Zhao and Zeyang Xia},
+  journal={arXiv preprint arXiv:2510.14260},
+  year={2025}
+}</code></pre>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Contact</h2>
+    We welcome collaborations on the further development of MatchAttention. Please contact <a href="mailto:tingmanyan@dlut.edu.cn">Tingman Yan</a> if you are interested.
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
