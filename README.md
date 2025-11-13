@@ -122,7 +122,7 @@ Please cite our paper if you find it useful
 ```
 
 # Acknowledgement
-We would like to thank the authors of [UniMatch](https://github.com/autonomousvision/unimatch), [RAFT-Stereo](https://github.com/princeton-vl/RAFT-Stereo), [MetaFormer](https://github.com/sail-sg/metaformer), and [TransNeXt](https://github.com/DaiShiResearch/TransNeXt) for their code release. Thanks to the author of [FoundationStereo](https://github.com/NVlabs/FoundationStereo) for the release of FSD dataset.
+We would like to thank the authors of [UniMatch](https://github.com/autonomousvision/unimatch), [RAFT-Stereo](https://github.com/princeton-vl/RAFT-Stereo), [MetaFormer](https://github.com/sail-sg/metaformer), and [TransNeXt](https://github.com/DaiShiResearch/TransNeXt) for their code release. Thanks to the author of [FoundationStereo](https://github.com/NVlabs/FoundationStereo) for the release of the FSD dataset.
 
 # Contact
-Please reach out to [Tingman Yan](tingmanyan@dlut.edu.cn) for questions.
+Please reach out to [Tingman Yan](mailto:tingmanyan@dlut.edu.cn) for questions.
